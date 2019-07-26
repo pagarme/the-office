@@ -48,7 +48,7 @@
 <style>
   .filter-input {
     margin-bottom: 15px;
-    max-width: 97.5%;
+    max-width: 97.6%;
   }
 </style>
 
