@@ -30,7 +30,7 @@ Objetivos do protótipo:
 
 ### Tecnologias
 
-O projeto tem como uma das premissas utilizar tecnologias ultra modernas e não depender de gerenciamento de servidores. Tendo isso em mente o projeto está sendo construiído usando <a href="https://svelte.dev/" target="_blank">Svelte</a>, <a href="https://jitsi.org/" target="_blank">Jitsi</a>, <a href="https://firebase.google.com/docs/database" target="_blank">Firebase Realtime Database</a>, <a href="https://firebase.google.com/docs/functions" target="_blank">Firebase Functions</a> e <a href="http://now.sh">Zeit Now</a>.
+O projeto tem como uma das premissas utilizar tecnologias ultra modernas e não depender de gerenciamento de servidores. Tendo isso em mente o projeto está sendo construído usando <a href="https://svelte.dev/" target="_blank">Svelte</a>, <a href="https://jitsi.org/" target="_blank">Jitsi</a>, <a href="https://firebase.google.com/docs/database" target="_blank">Firebase Realtime Database</a>, <a href="https://firebase.google.com/docs/functions" target="_blank">Firebase Functions</a> e <a href="http://now.sh">Zeit Now</a>.
 
 ## Como utilizar
 
