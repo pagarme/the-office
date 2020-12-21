@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import { getUserProfile } from '../services/local'
-  import { Rooms } from '../models'
+  import { Rooms, Config } from '../models'
   import { appSlug } from '../../config'
 
   export let activeRoom
@@ -11,6 +11,8 @@
 
   onMount(async () => {
     const room = await Rooms.get(`${activeRoom}`)
+    const { jitsiPassword } = await Config.get(`/`)
+
     if (room.noJitsi) {
       noJitsi = true
       return
@@ -61,7 +63,9 @@
       meet._frame.style.height = 'calc(100vh - 170px)'
       meet.executeCommand('displayName', userProfile.name)
       meet.executeCommand('avatarUrl', userProfile.picture)
-    }, 1000)
+      meet.on('participantRoleChanged', () => meet.executeCommand('password', jitsiPassword))
+      meet.on('passwordRequired', () => meet.executeCommand('password', jitsiPassword))
+    }, 500)
   })
 </script>
 

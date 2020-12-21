@@ -22,6 +22,10 @@
     "blockedUsers": {
       ".read": false,
       ".write": false
+    },
+    "config": {
+      ".read": "auth.uid != null && auth.uid != null && root.child('blockedUsers').child(auth.uid).val() != true",
+      ".write": false
     }
   }
 }
