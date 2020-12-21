@@ -102,6 +102,9 @@
     right: 10px;
     z-index: 1;
   }
+  .title {
+    padding-bottom: 20px !important;
+  }
 </style>
 
 {#if globalyPinnedRoom}
