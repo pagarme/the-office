@@ -25,6 +25,7 @@
         parentNode: meetDiv,
         configOverwrite: {
           startWithVideoMuted: true,
+          disableAudioLevels: true,
         },
         interfaceConfigOverwrite: {
           TOOLBAR_BUTTONS: [
