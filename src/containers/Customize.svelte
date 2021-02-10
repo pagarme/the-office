@@ -5,7 +5,7 @@
 
   let selectedTheme
   let isDark = ''
-  
+
   themeStore.subscribe((value) => {
     selectedTheme = value
     isDark = value === 'dark' ? 'is-dark' : ''
@@ -24,6 +24,7 @@
     <select required id="dark_select" value={selectedTheme} on:change={updateTheme}>
       <option value="white">claro</option>
       <option value="dark">escuro</option>
+      <option value="carnival">carnaval</option>
     </select>
   </div>
 </Container>
