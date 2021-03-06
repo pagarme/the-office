@@ -1,9 +1,11 @@
 <script>
   import { themeStore } from '../services/store'
+
   export let onClick
   export let type = 'blank'
   export let classes = ''
-  
+  export let submit = false
+
   let darkMode
 
   themeStore.subscribe((value) => {
@@ -33,7 +35,7 @@
 </style>
 
 <button
-  type="button"
+  type={submit ? 'submit' : 'button'}
   class={`${classes} nes-btn ${darkMode ? darkThemeMap[type] : whiteThemeMap[type]}`}
   on:click={onClick}
 >
