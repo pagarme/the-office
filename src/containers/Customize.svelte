@@ -63,6 +63,8 @@
         hat: value,
       },
     }
+
+    return user
   }
 
   function changeAvatar ({ target }) {
@@ -92,7 +94,14 @@
 </Container>
 <Container>
   <p class="title">avatar</p>
-  <UserProfile user={user}/>
+  {#each hats as hat, index}
+    <label>
+      <input type="radio" class="nes-radio" name="hat" />
+      <span>
+        <UserProfile user={previewAvatarHat({ target: { value: index }})}/>
+      </span>
+    </label>
+  {/each}
   <form action="#" on:submit|preventDefault={changeAvatar}>
     <label for="avatar_hat_select">chapéu</label>
     <div class={`nes-select ${isDark}`}>

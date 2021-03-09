@@ -3,11 +3,13 @@
 
   export let user
 
-  $: avatar = {
+  $: user.avatar = {
     hat: user.avatar
       && user.avatar.hat
       && hats[user.avatar.hat],
   }
+
+  console.log('User ->', user.avatar)
 </script>
 
 <style>
@@ -51,16 +53,16 @@
   }
 </style>
 
-<div style="{avatar.hat && 'margin-top: 15px'}">
+<div style="{user.avatar.hat && 'margin-top: 15px'}">
   <img
     class="nes-avatar is-rounded is-large avatar"
     src={user.picture}
     alt={user.name}
   />
-  {#if avatar.hat && avatar.hat.url}
+  {#if user.avatar.hat && user.avatar.hat.url}
     <img
       class="hat"
-      src={avatar.hat.url} alt={avatar.hat.title}
+      src={user.avatar.hat.url} alt={user.avatar.hat.title}
     />
   {/if}
   <p class="nes-text is-primary tooltiptext nes-balloon from-left nes-pointer">{user.name}</p>
