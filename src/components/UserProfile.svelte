@@ -27,6 +27,7 @@
     height: 200%;
     width: 200%;
     z-index: 1;
+    pointer-events: none;
   }
 
   div {
@@ -40,7 +41,7 @@
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     margin-top: -135px;
     margin-left: -5px;
     padding: 3px;
