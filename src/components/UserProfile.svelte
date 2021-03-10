@@ -41,7 +41,7 @@
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     margin-top: -135px;
     margin-left: -5px;
     padding: 3px;
