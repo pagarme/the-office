@@ -27,6 +27,7 @@
     height: 200%;
     width: 200%;
     z-index: 1;
+    pointer-events: none;
   }
 
   div {
