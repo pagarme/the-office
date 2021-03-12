@@ -42,9 +42,9 @@
     padding: 5px 0;
     position: absolute;
     z-index: 2;
-    margin-top: -135px;
-    margin-left: -5px;
     padding: 3px;
+    bottom: 0;
+    left: 10px;
   }
 
   div:hover .tooltiptext {
