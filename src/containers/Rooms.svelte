@@ -39,11 +39,23 @@
       return false
     })
 
-  Rooms.watch(
+    function sortRoomsByUsers (rooms) {
+      return rooms.sort((baseRoom, nextRoom) => {
+        const baseRoomUsers = baseRoom.users || {}
+        const nextRoomUsers = nextRoom.users || {}
+
+        const baseRoomLengh = Object.keys(baseRoomUsers).length
+        const nextRoomLengh = Object.keys(nextRoomUsers).length
+
+        return nextRoomLengh - baseRoomLengh
+      })
+    }
+
+    Rooms.watch(
     '/',
     true,
     (remoteRooms) => {
-      allRooms = remoteRooms
+      allRooms = sortRoomsByUsers(remoteRooms)
       loading = false
     }
   )
