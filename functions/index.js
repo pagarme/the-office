@@ -2,7 +2,7 @@ const functions = require('firebase-functions')
 const admin = require('firebase-admin')
 const { allowedDomains } = require('./config')
 
-admin.initializeApp(functions.config().firebase)
+admin.initializeApp()
 
 const userOnlineRef = functions.database.ref('/users/{userId}/online')
 
