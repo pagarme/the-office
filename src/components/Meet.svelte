@@ -62,8 +62,10 @@
     setTimeout(() => {
       const meet = new JitsiMeetExternalAPI(domain, options)
       meet._frame.style.height = 'calc(100vh - 170px)'
-      meet.executeCommand('displayName', userProfile.name)
-      meet.executeCommand('avatarUrl', userProfile.picture)
+      meet.on('videoConferenceJoined', () => {
+        meet.executeCommand('displayName', userProfile.name)
+        meet.executeCommand('avatarUrl', userProfile.picture)
+      })
       meet.on('participantRoleChanged', () => meet.executeCommand('password', jitsiPassword))
       meet.on('passwordRequired', () => meet.executeCommand('password', jitsiPassword))
     }, 500)
